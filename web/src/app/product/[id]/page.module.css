@@ -1,7 +1,9 @@
 .main {
     min-height: 100vh;
     padding-top: 80px;
-    /* Header height */
+    background-color: #080808;
+    /* Deep matte black */
+    color: #ffffff;
 }
 
 .container {
@@ -40,8 +42,10 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-size: 0.8rem;
-    opacity: 0.6;
+    opacity: 0.7;
+    /* Increased opacity for dark mode */
     margin-bottom: 1rem;
+    color: #a0a0a0;
 }
 
 .title {
@@ -49,6 +53,7 @@
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .price {
@@ -56,12 +61,13 @@
     font-size: 1.25rem;
     font-weight: 300;
     margin-bottom: 2rem;
+    color: #e0e0e0;
 }
 
 .divider {
     width: 100%;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     margin-bottom: 2rem;
 }
 
@@ -70,6 +76,7 @@
     line-height: 1.6;
     opacity: 0.8;
     margin-bottom: 3rem;
+    color: #cccccc;
 }
 
 .label {
@@ -78,6 +85,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
+    color: #a0a0a0;
 }
 
 .sizeGrid {
@@ -89,7 +97,7 @@
 .sizeBtn {
     width: 50px;
     height: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     background: transparent;
     display: flex;
     align-items: center;
@@ -97,10 +105,12 @@
     font-family: var(--font-secondary);
     cursor: pointer;
     transition: all 0.3s;
+    color: #fff;
 }
 
 .sizeBtn:hover {
-    border-color: #000;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .actions {
@@ -113,26 +123,28 @@
 .addToBagBtn {
     width: 100%;
     padding: 1.25rem;
-    background: #000;
-    color: #fff;
+    background: #ffffff;
+    /* Stark White for contrast */
+    color: #000000;
     border: none;
     text-transform: uppercase;
     font-family: var(--font-secondary);
     letter-spacing: 0.1em;
     cursor: pointer;
     transition: background 0.3s;
+    font-weight: 700;
 }
 
 .addToBagBtn:hover {
-    background: #333;
+    background: #e0e0e0;
 }
 
 .enquireBtn {
     width: 100%;
     padding: 1rem;
     background: transparent;
-    color: #000;
-    border: 1px solid #000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     font-family: var(--font-secondary);
     letter-spacing: 0.1em;
@@ -141,17 +153,18 @@
 }
 
 .enquireBtn:hover {
-    background: #000;
-    color: #fff;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .metaItem {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     font-family: var(--font-secondary);
     font-size: 0.9rem;
+    color: #d0d0d0;
 }
 
 .metaLabel {
