@@ -1,0 +1,118 @@
+.main {
+    padding-top: 120px;
+    /* Account for fixed header */
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+.title {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.filterBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 80px;
+    /* Below site header */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.categories {
+    display: flex;
+    gap: 2rem;
+}
+
+.filterBtn {
+    background: none;
+    border: none;
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+}
+
+.filterBtn:hover,
+.active {
+    opacity: 1;
+}
+
+.active {
+    border-bottom: 1px solid var(--accent);
+}
+
+.count {
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    /* Ultra-thin gap for high fashion look */
+    padding: 0 3rem 6rem 3rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1.5rem 4rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .filterBar {
+        overflow-x: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .categories {
+        gap: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .count {
+        display: none;
+    }
+}
