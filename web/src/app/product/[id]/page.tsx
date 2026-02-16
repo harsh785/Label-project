@@ -1,5 +1,5 @@
-import { products } from "../../data/products";
-import { getAssetPath } from "../../utils/assets";
+import { products } from "../../../data/products";
+import { getAssetPath } from "../../../utils/assets";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
