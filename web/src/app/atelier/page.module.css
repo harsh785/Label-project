@@ -1,0 +1,294 @@
+.main {
+    background-color: #050505;
+    /* Deep rich black */
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* 1. Heritage Hero */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('/Label-project/images/lehenga.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.heroSubtitle {
+    display: block;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.3em;
+    font-size: 0.9rem;
+    color: #D4AF37;
+    /* Gold */
+    margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+    font-family: var(--font-primary);
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.heroText {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 2. Philosophy */
+.philosophySection {
+    padding: 10rem 2rem;
+    text-align: center;
+    background: #0a0a0a;
+}
+
+.philosophyContent {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.philosophyText {
+    font-family: var(--font-primary);
+    /* Serif for philosophy */
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+.signature {
+    font-family: 'Cursive', serif;
+    /* Fallback */
+    font-size: 2rem;
+    color: #D4AF37;
+}
+
+/* 3. The Process */
+.processSection {
+    padding: 5rem 2rem 10rem 2rem;
+    background: #050505;
+}
+
+.processGrid {
+    max-width: 1200px;
+    margin: 6rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.processCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.processCardReverse {
+    direction: rtl;
+    /* Flip order visually */
+}
+
+/* Fix text direction inside reversed card */
+.processCardReverse .processInfo {
+    direction: ltr;
+    text-align: right;
+}
+
+.processImageWrapper {
+    position: relative;
+    aspect-ratio: 3/4;
+    width: 100%;
+}
+
+.processImage {
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+    transition: filter 0.5s ease;
+}
+
+.processCard:hover .processImage {
+    filter: grayscale(0%) contrast(1);
+}
+
+.processInfo {
+    padding: 2rem;
+}
+
+.stepNumber {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 5rem;
+    color: #222;
+    /* Subtle background number */
+    line-height: 1;
+    margin-bottom: -1rem;
+}
+
+.processTitle {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.processDesc {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #999;
+}
+
+/* 4. Craft Spotlight */
+.craftSection {
+    padding: 8rem 2rem;
+    background: #080808;
+    border-top: 1px solid #222;
+}
+
+.craftHeader {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.sectionSubtitle {
+    font-family: var(--font-secondary);
+    letter-spacing: 0.2em;
+    color: #666;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.craftGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.craftCard {
+    padding: 4rem 2rem;
+    border: 1px solid #222;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.craftCard:hover {
+    border-color: #D4AF37;
+    background: #0c0c0c;
+}
+
+.craftName {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.craftDesc {
+    font-family: var(--font-secondary);
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* 5. Appointment CTA */
+.appointmentSection {
+    padding: 10rem 2rem;
+    text-align: center;
+    background: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/Label-project/images/saree.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.appointmentTitle {
+    font-family: var(--font-primary);
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.appointmentText {
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.bookButton {
+    padding: 1.2rem 3rem;
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bookButton:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+
+    .processCard {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .processCardReverse {
+        direction: ltr;
+    }
+
+    .processCardReverse .processInfo {
+        text-align: left;
+    }
+
+    .processImageWrapper {
+        order: -1;
+        /* Always image on top for mobile */
+    }
+}
