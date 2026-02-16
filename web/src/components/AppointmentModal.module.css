@@ -1,0 +1,231 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.modal {
+    position: relative;
+    z-index: 2;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* Subtle Gold border */
+    padding: 3rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.closeBtn:hover {
+    color: #D4AF37;
+}
+
+.title {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-family: var(--font-secondary);
+    color: #999;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    width: 100%;
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 0.8rem 0;
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: all 0.3s;
+    border-radius: 0;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-bottom-color: #D4AF37;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+/* Custom styling for select to hide default arrow and appearance */
+.select {
+    color: #ccc;
+    cursor: pointer;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23D4AF37%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 top 50%;
+    background-size: 0.65rem auto;
+}
+
+.select option {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Calendar icon color fix for date input */
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.successMessage {
+    text-align: center;
+    padding: 4rem 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.checkIcon {
+    font-size: 4rem;
+    color: #D4AF37;
+    margin-bottom: 2rem;
+    border: 2px solid #D4AF37;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.successMessage h3 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.successMessage p {
+    font-family: var(--font-secondary);
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 2rem;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
