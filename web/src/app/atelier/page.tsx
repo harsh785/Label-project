@@ -201,6 +201,26 @@ export default function Atelier() {
                         <h3 className={styles.craftName}>Gotapatti</h3>
                         <p className={styles.craftDesc}>Applique work originating from Rajasthan.</p>
                     </div>
+                    <div className={styles.craftCard}>
+                        <h3 className={styles.craftName}>Chikankari</h3>
+                        <p className={styles.craftDesc}>Delicate hand embroidery from Lucknow.</p>
+                    </div>
+                    <div className={styles.craftCard}>
+                        <h3 className={styles.craftName}>Kantha</h3>
+                        <p className={styles.craftDesc}>Running stitch embroidery from Bengal.</p>
+                    </div>
+                    <div className={styles.craftCard}>
+                        <h3 className={styles.craftName}>Phulkari</h3>
+                        <p className={styles.craftDesc}>Floral embroidery geometric patterns from Punjab.</p>
+                    </div>
+                    <div className={styles.craftCard}>
+                        <h3 className={styles.craftName}>Kalamkari</h3>
+                        <p className={styles.craftDesc}>Hand-painted or block-printed cotton textile.</p>
+                    </div>
+                    <div className={styles.craftCard}>
+                        <h3 className={styles.craftName}>Bandhani</h3>
+                        <p className={styles.craftDesc}>Traditional tie-dye method from Gujarat.</p>
+                    </div>
                 </div>
             </section>
 
