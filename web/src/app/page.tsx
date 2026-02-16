@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import ProductCard from "../components/ProductCard";
+import { getAssetPath } from "../utils/assets";
 
 export default function Home() {
   const products = [
@@ -8,21 +9,21 @@ export default function Home() {
       name: "The Royal Velvet Lehenga",
       category: "Bridal Couture",
       price: "₹ 2,45,000",
-      image: "/images/lehenga.png",
+      image: getAssetPath("/images/lehenga.png"),
     },
     {
       id: "2",
       name: "Opulent Kanjivaram Silk",
       category: "Handloom Heritage",
       price: "₹ 1,85,000",
-      image: "/images/saree.png",
+      image: getAssetPath("/images/saree.png"),
     },
     {
       id: "3",
       name: "Noir Avant-Garde Gown",
       category: "Evening Wear",
       price: "₹ 3,20,000",
-      image: "/images/gown.png",
+      image: getAssetPath("/images/gown.png"),
     },
   ];
 
