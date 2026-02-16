@@ -12,6 +12,7 @@ export interface Product {
     material: string;
     care: string;
     gallery: string[];
+    newArrival?: boolean;
 }
 
 export const products: Product[] = [
@@ -26,7 +27,8 @@ export const products: Product[] = [
         description: "Hand-embroidered zardozi on plush jet-black velvet. This bridal lehenga features a 24-kali flare and antique gold wire work, perfect for the modern maharani. Paired with a signature blouse and tulle dupatta.",
         material: "Pure Micro Velvet",
         care: "Dry Clean Only",
-        gallery: [getAssetPath("/images/lehenga.png"), getAssetPath("/images/lehenga.png"), getAssetPath("/images/lehenga.png")]
+        gallery: [getAssetPath("/images/lehenga.png"), getAssetPath("/images/lehenga.png"), getAssetPath("/images/lehenga.png")],
+        newArrival: true
     },
     {
         id: "2",
@@ -39,7 +41,8 @@ export const products: Product[] = [
         description: "Woven by master artisans in Kanchipuram, this pure silk saree features real zari threads in a double-warp weave. The rich gold sheen is complemented by a traditional korvai border.",
         material: "Pure Kanjivaram Silk",
         care: "Dry Clean Only. Store in muslin cloth.",
-        gallery: [getAssetPath("/images/saree.png"), getAssetPath("/images/saree.png")]
+        gallery: [getAssetPath("/images/saree.png"), getAssetPath("/images/saree.png")],
+        newArrival: true
     },
     {
         id: "3",
@@ -52,7 +55,8 @@ export const products: Product[] = [
         description: "A structural masterpiece inspired by architectural forms. This gown features 3D sequin embellishments and a dramatic sculptural shoulder line. Crafted for the red carpet.",
         material: "Imported Scuba & Tulle",
         care: "Specialist Dry Clean Only",
-        gallery: [getAssetPath("/images/gown.png"), getAssetPath("/images/gown.png")]
+        gallery: [getAssetPath("/images/gown.png"), getAssetPath("/images/gown.png")],
+        newArrival: true
     },
     // Duplicates to fill grid for demo
     {
