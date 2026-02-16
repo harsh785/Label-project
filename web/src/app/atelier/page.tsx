@@ -1,11 +1,38 @@
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "./page.module.css";
 import { getAssetPath } from "../../utils/assets";
+import StoryOverlay from "../../components/StoryOverlay";
+
+interface StoryData {
+    title: string;
+    image: string;
+    quote: string;
+    text: string;
+}
 
 export default function Atelier() {
+    const [activeStory, setActiveStory] = useState<StoryData | null>(null);
+
+    const stories: Record<string, StoryData> = {
+        weavers: {
+            title: "The Last Weavers",
+            image: getAssetPath("/images/saree.png"),
+            quote: "The loom speaks a language only my fingers understand. It is the rhythm of my ancestors.",
+            text: "In the narrow lanes of Varanasi, the rhythmic clack of the handloom is fading, replaced by the roar of power looms. We work directly with 40 master weaver families, providing them with fair wages, raw silk, and a global platform. Each saree takes anywhere from 3 to 12 weeks to weave, a testament to patience in an age of instant gratification."
+        },
+        zardozi: {
+            title: "Reviving the Royal Court",
+            image: getAssetPath("/images/lehenga.png"),
+            quote: "To work with gold is to weave light itself.",
+            text: "Zardozi, the art of gold sewing, was once the exclusive domain of Mughal courts. Over time, plastic threads and mass production diluted its glory. At our atelier, we use only authentic copper and silver wire plated with gold. We have established a training center in Lucknow where veteran Kaarigars teach this dying art to the next generation, ensuring the royal court lives on."
+        }
+    };
+
     return (
         <main className={styles.main}>
+            <StoryOverlay story={activeStory} onClose={() => setActiveStory(null)} />
+
             {/* 1. Heritage Hero */}
             <section className={styles.hero}>
                 <div className={styles.heroOverlay}></div>
@@ -125,34 +152,34 @@ export default function Atelier() {
                                 battles the rise of power looms. We work directly with 40
                                 families to ensure fair wages and dignity.
                             </p>
-                            <button className={styles.readMoreBtn}>Read Their Story</button>
-                        </div>
-                    </div>
-
-                    <div className={styles.storyCard}>
-                        <div className={styles.storyImageWrapper}>
-                            <Image
-                                src={getAssetPath("/images/lehenga.png")}
-                                alt="Zardozi Artisan"
-                                fill
-                                className={styles.storyImage}
-                            />
-                        </div>
-                        <div className={styles.storyContent}>
-                            <h3 className={styles.storyTitle}>Reviving the Royal Court</h3>
-                            <p className={styles.storyText}>
-                                Zardozi was once the exclusive domain of kings. Today, we are
-                                reviving authentic gold-wire techniques that were lost for
-                                decades, training a new generation of kaarigars.
-                            </p>
-                            <button className={styles.readMoreBtn}>Read Their Story</button>
-                        </div>
-                    </div>
+                            <button className={styles.readMoreBtn} onClick={() => setActiveStory(stories.weavers)}>Read Their Story</button>
+                        </div>        </div>
                 </div>
-            </section>
 
-            {/* 4. Craft Spotlight */}
-            <section className={styles.craftSection}>
+                <div className={styles.storyCard}>
+                    <div className={styles.storyImageWrapper}>
+                        <Image
+                            src={getAssetPath("/images/lehenga.png")}
+                            alt="Zardozi Artisan"
+                            fill
+                            className={styles.storyImage}
+                        />
+                    </div>
+                    <div className={styles.storyContent}>
+                        <h3 className={styles.storyTitle}>Reviving the Royal Court</h3>
+                        <p className={styles.storyText}>
+                            Zardozi was once the exclusive domain of kings. Today, we are
+                            reviving authentic gold-wire techniques that were lost for
+                            decades, training a new generation of kaarigars.
+                        </p>
+                        <button className={styles.readMoreBtn} onClick={() => setActiveStory(stories.zardozi)}>Read Their Story</button>
+                    </div>        </div>
+            </div>
+        </div>
+            </section >
+
+        {/* 4. Craft Spotlight */ }
+        < section className = { styles.craftSection } >
                 <div className={styles.craftHeader}>
                     <h2 className={styles.sectionTitle}>Master Crafts</h2>
                     <p className={styles.sectionSubtitle}>TECHNIQUES PRESERVED THROUGH GENERATIONS</p>
@@ -172,17 +199,17 @@ export default function Atelier() {
                         <p className={styles.craftDesc}>Applique work originating from Rajasthan.</p>
                     </div>
                 </div>
-            </section>
+            </section >
 
-            {/* 5. Appointment CTA */}
-            <section className={styles.appointmentSection}>
+        {/* 5. Appointment CTA */ }
+        < section className = { styles.appointmentSection } >
                 <h2 className={styles.appointmentTitle}>Experience the Atelier</h2>
                 <p className={styles.appointmentText}>
                     Schedule a private viewing at our flagship store in New Delhi for a
                     bespoke bridal consultation.
                 </p>
                 <button className={styles.bookButton}>Request Appointment</button>
-            </section>
-        </main>
+            </section >
+        </main >
     );
 }
