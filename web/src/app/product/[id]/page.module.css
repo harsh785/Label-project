@@ -1,0 +1,186 @@
+.main {
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Header height */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.details {
+    padding: 4rem 4rem 4rem 6rem;
+}
+
+.stickyContent {
+    position: sticky;
+    top: 120px;
+    max-width: 500px;
+}
+
+.category {
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-family: var(--font-secondary);
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.label {
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.sizeGrid {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.sizeBtn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secondary);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sizeBtn:hover {
+    border-color: #000;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.addToBagBtn {
+    width: 100%;
+    padding: 1.25rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.addToBagBtn:hover {
+    background: #333;
+}
+
+.enquireBtn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.enquireBtn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.metaItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+}
+
+.metaLabel {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+    .details {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        padding: 2rem 1.5rem;
+    }
+
+    .stickyContent {
+        position: static;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
