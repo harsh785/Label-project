@@ -190,19 +190,36 @@
     line-height: 1.8;
 }
 
-.storiesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.storiesSliderContainer {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.storiesSliderContainer::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.storiesSlider {
+    display: flex;
+    gap: 3rem;
+    padding: 0 5vw;
+    /* Center the first card */
+    width: max-content;
 }
 
 .storyCard {
+    flex: 0 0 450px;
     background: #050505;
     border: 1px solid #222;
     text-align: left;
     transition: transform 0.3s;
+    scroll-snap-align: center;
 }
 
 .storyCard:hover {
