@@ -1,31 +1,10 @@
+import Link from "next/link";
 import Hero from "../components/Hero";
 import ProductCard from "../components/ProductCard";
-import { getAssetPath } from "../utils/assets";
+import { products } from "../data/products";
 
 export default function Home() {
-  const products = [
-    {
-      id: "1",
-      name: "The Royal Velvet Lehenga",
-      category: "Bridal Couture",
-      price: "₹ 2,45,000",
-      image: getAssetPath("/images/lehenga.png"),
-    },
-    {
-      id: "2",
-      name: "Opulent Kanjivaram Silk",
-      category: "Handloom Heritage",
-      price: "₹ 1,85,000",
-      image: getAssetPath("/images/saree.png"),
-    },
-    {
-      id: "3",
-      name: "Noir Avant-Garde Gown",
-      category: "Evening Wear",
-      price: "₹ 3,20,000",
-      image: getAssetPath("/images/gown.png"),
-    },
-  ];
+  const featuredProducts = products.slice(0, 3);
 
   return (
     <main>
@@ -45,9 +24,24 @@ export default function Home() {
           maxWidth: "1400px",
           margin: "0 auto"
         }}>
-          {products.map((product) => (
+          {featuredProducts.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}
+        </div>
+
+        <div style={{ marginTop: "4rem" }}>
+          <Link href="/collections" style={{
+            display: "inline-block",
+            padding: "1rem 2rem",
+            border: "1px solid #000",
+            fontFamily: "var(--font-secondary)",
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            fontSize: "0.9rem",
+            transition: "all 0.3s ease"
+          }}>
+            View All Collections
+          </Link>
         </div>
       </section>
     </main>
