@@ -99,6 +99,58 @@ export default function Atelier() {
                 </div>
             </section>
 
+            {/* 3.5. Preservation Stories (Guardians of the Craft) */}
+            <section className={styles.storiesSection}>
+                <h2 className={styles.sectionTitle}>Guardians of the Craft</h2>
+                <p className={styles.storiesIntro}>
+                    We are committed to sustaining the rare lineages of artisans who keep
+                    India&#39;s heritage alive. Each garment supports a family, a village, and
+                    a legacy fighting against extinction.
+                </p>
+
+                <div className={styles.storiesGrid}>
+                    <div className={styles.storyCard}>
+                        <div className={styles.storyImageWrapper}>
+                            <Image
+                                src={getAssetPath("/images/saree.png")}
+                                alt="Weaver"
+                                fill
+                                className={styles.storyImage}
+                            />
+                        </div>
+                        <div className={styles.storyContent}>
+                            <h3 className={styles.storyTitle}>The Last Weavers</h3>
+                            <p className={styles.storyText}>
+                                In the narrow lanes of Varanasi, a community of master weavers
+                                battles the rise of power looms. We work directly with 40
+                                families to ensure fair wages and dignity.
+                            </p>
+                            <button className={styles.readMoreBtn}>Read Their Story</button>
+                        </div>
+                    </div>
+
+                    <div className={styles.storyCard}>
+                        <div className={styles.storyImageWrapper}>
+                            <Image
+                                src={getAssetPath("/images/lehenga.png")}
+                                alt="Zardozi Artisan"
+                                fill
+                                className={styles.storyImage}
+                            />
+                        </div>
+                        <div className={styles.storyContent}>
+                            <h3 className={styles.storyTitle}>Reviving the Royal Court</h3>
+                            <p className={styles.storyText}>
+                                Zardozi was once the exclusive domain of kings. Today, we are
+                                reviving authentic gold-wire techniques that were lost for
+                                decades, training a new generation of kaarigars.
+                            </p>
+                            <button className={styles.readMoreBtn}>Read Their Story</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* 4. Craft Spotlight */}
             <section className={styles.craftSection}>
                 <div className={styles.craftHeader}>
