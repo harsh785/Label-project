@@ -2,7 +2,6 @@ import { products } from "../../data/products";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { getAssetPath } from "../../utils/assets";
 
 export default function NewArrivals() {
     // Filter only new arrivals
@@ -14,7 +13,7 @@ export default function NewArrivals() {
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
                     <h2 className={styles.editionLabel}>The Royal Edit</h2>
-                    <h1 className={styles.heroTitle}>New Arrivals<br />SS '26</h1>
+                    <h1 className={styles.heroTitle}>New Arrivals<br />SS &#39;26</h1>
                     <p className={styles.heroSubtitle}>
                         A curated selection of avant-garde drapes and regal silhouettes
                         for the modern muse.

@@ -18,7 +18,9 @@ export default function Collections() {
         <main className={styles.main}>
             <header className={styles.header}>
                 <h1 className={styles.title}>The Collection</h1>
-                <p className={styles.subtitle}>SS '26 / Ethereal Elegance</p>
+                <p className={styles.heroSubtitle}>
+                    Discover our curated selection of pre&#39;t, bridal, and evening wear.
+                </p>
             </header>
 
             {/* Top Filter Bar */}
