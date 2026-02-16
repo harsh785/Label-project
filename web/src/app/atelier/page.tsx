@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from "react";
 import styles from "./page.module.css";
 import { getAssetPath } from "../../utils/assets";
 import StoryOverlay from "../../components/StoryOverlay";
+import AppointmentModal from "../../components/AppointmentModal";
 
 interface StoryData {
     title: string;
@@ -16,6 +17,7 @@ interface StoryData {
 
 export default function Atelier() {
     const [activeStory, setActiveStory] = useState<StoryData | null>(null);
+    const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
     const sliderRef = useRef<HTMLDivElement>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -283,8 +285,10 @@ export default function Atelier() {
                     Schedule a private viewing at our flagship store in New Delhi for a
                     bespoke bridal consultation.
                 </p>
-                <button className={styles.bookButton}>Request Appointment</button>
+                <button className={styles.bookButton} onClick={() => setIsAppointmentOpen(true)}>Request Appointment</button>
             </section>
+
+            <AppointmentModal isOpen={isAppointmentOpen} onClose={() => setIsAppointmentOpen(false)} />
         </main>
     );
 }
