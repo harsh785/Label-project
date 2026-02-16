@@ -34,31 +34,31 @@ export default function Atelier() {
         },
         chikankari: {
             title: "Shadows of Lucknow",
-            image: getAssetPath("/images/gown.png"),
+            image: getAssetPath("/images/chikankari.png"),
             quote: "It is not just embroidery; it is painting with thread.",
             text: "Chikankari is a delicate and artfully done hand embroidery on a variety of textile fabrics like muslin, silk, chiffon, organza, net, etc. White thread is embroidered on cool, pastel shades of light muslin and cotton garments. We support a collective of 150 women artisans in Lucknow who practice this intricate craft, ensuring they receive fair compensation and recognition for their masterwork."
         },
         kantha: {
             title: "Stories in Stitch",
-            image: getAssetPath("/images/saree.png"),
+            image: getAssetPath("/images/kantha.png"),
             quote: "Every stitch tells a story, every quilt holds a memory.",
             text: "Kantha comprises the simplest stitch in the language of embroidery – the running stitch. Originating from Bengal, it was used to join layers of old saris to make quilts. Today, we interpret this humble domestic craft into high fashion, using the running stitch to create complex motifs and textures on fine silks, empowering rural women artisans."
         },
         phulkari: {
             title: "Flower Work of Punjab",
-            image: getAssetPath("/images/lehenga.png"),
+            image: getAssetPath("/images/phulkari.png"),
             quote: "We sow seeds of color on the fabric of life.",
             text: "Phulkari, which literally translates to 'flower work', has a history etched in the culture of Punjab. Spun from the charkha, this spectacular style of embroidery is patterned on odinis, shawls, kurtis and chunris. The main characteristic of this embroidery is the use of darn stitch on the wrong side of cloth with colored silken thread."
         },
         kalamkari: {
             title: "The Pen of Legend",
-            image: getAssetPath("/images/gown.png"),
+            image: getAssetPath("/images/kalamkari.jpg"),
             quote: "Nature flows through the pen onto the cloth.",
             text: "Kalamkari is an ancient style of hand painting done on cotton or silk fabric with a tamarind pen, using natural dyes. The word Kalamkari is derived from a Persian word where ‘kalam’ means pen and ‘kari’ refers to craftsmanship. Our collection features the Srikalahasti style, where the 'kalam' or pen is used for freehand drawing of the subject and filling in the colors."
         },
         bandhani: {
             title: "Dots of Joy",
-            image: getAssetPath("/images/saree.png"),
+            image: getAssetPath("/images/bandhani.jpg"),
             quote: "A thousand dots, a single prayer for prosperity.",
             text: "Bandhani is a type of tie-dye textile decorated by plucking the cloth with the fingernails into many tiny bindings that form a figurative design. The term bandhani is derived from the Sanskrit word 'bandh', to bind, to tie. We work with artisans in Kutch to bring these vibrant, dotted patterns to life on contemporary silhouettes."
         }
