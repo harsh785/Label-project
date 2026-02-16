@@ -1,0 +1,56 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 1;
+    /* Square for a modern look, or 3/4 for editorial */
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.05);
+}
+
+.details {
+    text-align: center;
+}
+
+.category {
+    font-family: var(--font-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.name:hover {
+    color: var(--accent);
+}
+
+.price {
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
