@@ -153,33 +153,33 @@ export default function Atelier() {
                                 families to ensure fair wages and dignity.
                             </p>
                             <button className={styles.readMoreBtn} onClick={() => setActiveStory(stories.weavers)}>Read Their Story</button>
-                        </div>        </div>
-                </div>
-
-                <div className={styles.storyCard}>
-                    <div className={styles.storyImageWrapper}>
-                        <Image
-                            src={getAssetPath("/images/lehenga.png")}
-                            alt="Zardozi Artisan"
-                            fill
-                            className={styles.storyImage}
-                        />
+                        </div>
                     </div>
-                    <div className={styles.storyContent}>
-                        <h3 className={styles.storyTitle}>Reviving the Royal Court</h3>
-                        <p className={styles.storyText}>
-                            Zardozi was once the exclusive domain of kings. Today, we are
-                            reviving authentic gold-wire techniques that were lost for
-                            decades, training a new generation of kaarigars.
-                        </p>
-                        <button className={styles.readMoreBtn} onClick={() => setActiveStory(stories.zardozi)}>Read Their Story</button>
-                    </div>        </div>
-            </div>
-        </div>
-            </section >
 
-        {/* 4. Craft Spotlight */ }
-        < section className = { styles.craftSection } >
+                    <div className={styles.storyCard}>
+                        <div className={styles.storyImageWrapper}>
+                            <Image
+                                src={getAssetPath("/images/lehenga.png")}
+                                alt="Zardozi Artisan"
+                                fill
+                                className={styles.storyImage}
+                            />
+                        </div>
+                        <div className={styles.storyContent}>
+                            <h3 className={styles.storyTitle}>Reviving the Royal Court</h3>
+                            <p className={styles.storyText}>
+                                Zardozi was once the exclusive domain of kings. Today, we are
+                                reviving authentic gold-wire techniques that were lost for
+                                decades, training a new generation of kaarigars.
+                            </p>
+                            <button className={styles.readMoreBtn} onClick={() => setActiveStory(stories.zardozi)}>Read Their Story</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 4. Craft Spotlight */}
+            <section className={styles.craftSection}>
                 <div className={styles.craftHeader}>
                     <h2 className={styles.sectionTitle}>Master Crafts</h2>
                     <p className={styles.sectionSubtitle}>TECHNIQUES PRESERVED THROUGH GENERATIONS</p>
@@ -199,17 +199,17 @@ export default function Atelier() {
                         <p className={styles.craftDesc}>Applique work originating from Rajasthan.</p>
                     </div>
                 </div>
-            </section >
+            </section>
 
-        {/* 5. Appointment CTA */ }
-        < section className = { styles.appointmentSection } >
+            {/* 5. Appointment CTA */}
+            <section className={styles.appointmentSection}>
                 <h2 className={styles.appointmentTitle}>Experience the Atelier</h2>
                 <p className={styles.appointmentText}>
                     Schedule a private viewing at our flagship store in New Delhi for a
                     bespoke bridal consultation.
                 </p>
                 <button className={styles.bookButton}>Request Appointment</button>
-            </section >
-        </main >
+            </section>
+        </main>
     );
 }
