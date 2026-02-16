@@ -198,11 +198,39 @@
     /* Firefox */
     -ms-overflow-style: none;
     /* IE/Edge */
+    scroll-behavior: smooth;
 }
 
 .storiesSliderContainer::-webkit-scrollbar {
     display: none;
     /* Chrome/Safari */
+}
+
+.sliderDots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.activeDot {
+    background: #D4AF37;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #666;
 }
 
 .storiesSlider {

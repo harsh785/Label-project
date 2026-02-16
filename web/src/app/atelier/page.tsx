@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./page.module.css";
 import { getAssetPath } from "../../utils/assets";
 import StoryOverlay from "../../components/StoryOverlay";
@@ -16,6 +16,8 @@ interface StoryData {
 
 export default function Atelier() {
     const [activeStory, setActiveStory] = useState<StoryData | null>(null);
+    const sliderRef = useRef<HTMLDivElement>(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const stories: Record<string, StoryData> = {
         weavers: {
@@ -63,6 +65,33 @@ export default function Atelier() {
     };
 
     const storyKeys = Object.keys(stories);
+
+    const handleScroll = () => {
+        if (sliderRef.current) {
+            const scrollLeft = sliderRef.current.scrollLeft;
+            const cardWidth = 450 + 48; // card width + gap (approx)
+            const index = Math.round(scrollLeft / cardWidth);
+            setCurrentSlide(index);
+        }
+    };
+
+    useEffect(() => {
+        const slider = sliderRef.current;
+        if (slider) {
+            slider.addEventListener('scroll', handleScroll);
+            return () => slider.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
+    const scrollToSlide = (index: number) => {
+        if (sliderRef.current) {
+            const cardWidth = 450 + 48; // card width + gap
+            sliderRef.current.scrollTo({
+                left: index * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
         <main className={styles.main}>
@@ -170,7 +199,7 @@ export default function Atelier() {
                     a legacy fighting against extinction.
                 </p>
 
-                <div className={styles.storiesSliderContainer}>
+                <div className={styles.storiesSliderContainer} ref={sliderRef}>
                     <div className={styles.storiesSlider}>
                         {storyKeys.map((key) => (
                             <div key={key} className={styles.storyCard}>
@@ -190,6 +219,17 @@ export default function Atelier() {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className={styles.sliderDots}>
+                    {storyKeys.map((_, index) => (
+                        <button
+                            key={index}
+                            className={`${styles.dot} ${currentSlide === index ? styles.activeDot : ''}`}
+                            onClick={() => scrollToSlide(index)}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
                 </div>
             </section>
 
